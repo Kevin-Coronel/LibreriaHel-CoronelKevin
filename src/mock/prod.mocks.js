@@ -9,7 +9,7 @@ const prod = [
 
     {
         id:2,
-        title:'Demon Slayer #09',
+        title:'Demon Slayer #08',
         price:'$750',
         imagen:'img-2.jpg',
         stock: 5
