@@ -8,10 +8,7 @@ const ItemList = () =>{
    const [listProd, setListProd] = useState([])
 
    const products = new Promise( (resolve, reject) => {
-        setTimeout (() =>{
             resolve(prod)
-        }, 2000)
-        
    })
 
    useEffect(() =>{

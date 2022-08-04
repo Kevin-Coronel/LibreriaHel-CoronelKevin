@@ -1,27 +1,30 @@
 import './ItemDetailContainer.scss';
 import ItemDetail from '../ItemDetail/ItemDetail';
-import detailProd from '../../mock-detail/mock-detail';
+import prod from '../../mock/prod.mocks';
 import { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
 
 const ItemDetailContainer = () =>{
 
-    const [detailListProd, setdetailListProd] = useState([])
+        const { id } = useParams()
 
-    const detailProduct= new Promise ( (resolve, reject) => {
-        setTimeout (()=> {
-            resolve(detailProd)
-        }, 2000)
-    })
+        const [productData, setProductData] = useState ({})
 
-    useEffect(() =>{
-        detailProduct.then((response) => {
-                setdetailListProd(response)
-        })
-   },[])
+        const filtroProd = () =>{
+            prod.some( (product) => {
+                if (product.id == id) {
+                    setProductData (product)
+                }
+            } )
+        }
+
+        useEffect( () =>{
+            filtroProd()
+        }, [])
 
     return(
         <div>
-            {detailListProd.map( detailProduct => <ItemDetail detalleProducto={detailProduct}/>)}
+            <ItemDetail data={productData}/>
         </div>
     )
 }

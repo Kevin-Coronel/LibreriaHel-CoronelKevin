@@ -1,11 +1,11 @@
 import './ItemCount.scss';
 import {useState} from 'react'
 
-const ItemCount = ({stock}) =>{
+const ItemCount = () =>{
     let [count, setCount] = useState(1)
 
     const addNumber = () =>{
-        if(count < stock){
+        if(count < 1){
             setCount(count + 1)
         }
     }

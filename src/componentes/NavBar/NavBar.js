@@ -1,5 +1,6 @@
 import './NavBar.scss';
 import Cart from '../CartWidget/CartWidget';
+import { Link } from 'react-router-dom';
 
 const NavBar = () =>{
     return (
@@ -7,10 +8,9 @@ const NavBar = () =>{
             <h1>Hel</h1>
 
             <ul>
-                <li><button>Inicio</button></li>
-                <li><button>Libros</button></li>
-                <li><button>Mangas</button></li>
-                <li><button>Comics</button></li>
+                <Link to ="/"><li><button>INICIO</button></li></Link>
+                <Link to ="/mangas"><li><button>MANGAS</button></li></Link>
+                <Link to ="/libros"><li><button>LIBROS</button></li></Link>
             </ul>
 
            <Cart />

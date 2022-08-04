@@ -1,11 +1,43 @@
-.div-item{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin: 30px;
-    padding: 20px;
+a{
+    color: black;
+    text-decoration: none;
 
-    img{
-        width: 280px;
+    .div-item{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 8px 28px 24px 28px;
+        padding: 20px;
+    
+        img{
+            align-self: center;
+            width: 264px;
+            height: 400px;
+        }
+
+        .tarjTit{
+            font-family: 'Montserrat', sans-serif;
+            font-size: 16px;
+        }
+
+        .tarjTit:hover{
+            text-decoration: underline;
+        }
+
+        .tarjPrice{
+            font-family: 'Montserrat', sans-serif;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+
+        .botonMain{
+            padding: 15px;
+            background-color:#efffa3d6;
+            border: 1px solid rgba(240, 255, 255, 0.705);
+            border-radius: 7px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 12px;
+            margin-top: 5px;
+        }
     }
 }
