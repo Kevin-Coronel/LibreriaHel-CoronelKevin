@@ -1,10 +1,39 @@
 .div-count{
     display: flex;
     justify-content: center;
+    margin-top: 12px;
 
-    button{
-        margin: 10px;
-        background-color: white;
-        border: solid 1px black;
+    .num{
+        padding: 12px;
     }
+
+    .buttonAr{
+        background-color: rgba(239, 255, 163, 0.8392156863);
+        border: 1px solid rgba(240, 255, 255, 0.705);
+        padding: 13px;
+        border-radius: 8px;
+        margin: 12px 10px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+
+    .buttonAr:hover{
+        background-color: #e7f894;;
+    }
+
+}
+
+.buttonAdd{
+    padding: 20px 35px;
+    margin: 12px;
+    background-color:#efffa3d6;
+    border: 1px solid rgba(240, 255, 255, 0.705);
+    border-radius: 7px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.buttonAdd:hover{
+    background-color: #e7f894;;
 }

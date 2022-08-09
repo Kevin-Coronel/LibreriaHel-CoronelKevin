@@ -5,6 +5,7 @@ const prod = [
         price:'$750,00',
         imagen:'img-1.jpg',
         stock: 7,
+        categoria: "Manga",
         alt: "Takemichi",
         autor:"Ken Wakui",
         desc: `Resignado a vivir su vida de mierda, Takemichi Hangaki se 
@@ -21,6 +22,7 @@ const prod = [
         price:'$750,00',
         imagen:'img-2.jpg',
         stock: 5,
+        categoria: "Manga",
         alt: "Rengoku",
         autor:"Koyoharu Gotouge",
         desc: `Esta obra de Koyoharu Gotouge, uno de los últimos megaéxitos de la Shonen Jump en Japón, transcurre en el Japón feudal de la Era Taisho, 
@@ -34,6 +36,7 @@ const prod = [
         price:'$4350,00',
         imagen:'img-3.jpg',
         stock: 3,
+        categoria: "Libro",
         alt: "Sueño",
         autor:"Stephen King",
         desc: `Un día se siente atraído por una ciudad de New Hampshire, donde encontrará trabajo en una 
@@ -50,6 +53,7 @@ const prod = [
         price:'$5500,00',
         imagen:'deseo.jpg',
         stock: 4,
+        categoria: "Libro",
         alt: "Deseo",
         autor:"Andrzej Sapkowski",
         desc:`Geralt de Rivia, brujo y mutante sobrehumano, se gana la vida como cazador de monstruos en una tierra de magia y maravilla: 

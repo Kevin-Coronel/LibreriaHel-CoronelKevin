@@ -1,30 +1,32 @@
 import './ItemCount.scss';
 import {useState} from 'react'
 
-const ItemCount = () =>{
-    let [count, setCount] = useState(1)
+const ItemCount = ({quantitySelected}) =>{
+    const [count, setCount] = useState(1)
 
-    const addNumber = () =>{
-        if(count < 1){
-            setCount(count + 1)
-        }
+    const addCount = () =>{
+        setCount (count + 1)
     }
 
-    const susNumber = () =>{
-        setCount(count - 1)
+    const susCount = () =>{
+        setCount (count - 1)
+    }
 
-        if(count === 0){
-            setCount(count = 0)
-        }
+    const onAdd = () =>{
+        quantitySelected(count)
     }
 
     return(
+        <>
+            <div class="div-count">
+                <button class="buttonAr" onClick={susCount}>-</button>
+                <p class="num">{count}</p>
+                <button class="buttonAr" onClick={addCount}>+</button>
+            </div>
 
-        <div class="div-count">
-            <button onClick={susNumber}>-</button>
-            <p>{count}</p>
-            <button onClick={addNumber}>+</button>
-        </div>
+            <button class="buttonAdd" onClick={onAdd}>AÑADIR AL CARRITO</button>
+        </>
+        
     )
     
 }

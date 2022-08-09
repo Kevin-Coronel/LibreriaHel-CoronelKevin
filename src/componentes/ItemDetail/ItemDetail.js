@@ -1,9 +1,11 @@
-import './ItemDetail.scss'
-
+import './ItemDetail.scss';
+import ItemCount from '../ItemCount/ItemCount';
+import { useState } from 'react'
+import { Link } from 'react-router-dom';
 
 const ItemDetail = ({data}) =>{
+    const [quantitySelected, setQuantitySelected] = useState (1)
 
-    // const {title,imagen,price,desc,alt} = detalleProducto
 
     return(
         <div class="display">
@@ -14,7 +16,9 @@ const ItemDetail = ({data}) =>{
             <p class="autor">{data.autor}</p>
             <p class="sub-title">Descripción:</p>
             <p class="description">{data.desc}</p>
-            <button class="button">AGREGAR AL CARRITO</button>
+            
+            {  quantitySelected > 1 ? <Link to="/cart"><button class="button">TERMINAR COMPRA</button></Link> : <ItemCount quantitySelected={setQuantitySelected}/> }
+            {/* <button class="button">AGREGAR AL CARRITO</button> */}
         </div>
     )
 }
