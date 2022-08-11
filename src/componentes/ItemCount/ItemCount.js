@@ -1,8 +1,10 @@
 import './ItemCount.scss';
-import {useState} from 'react'
+import {useState, useContext} from 'react'
+import { CartContext } from '../../context/CartContext';
 
-const ItemCount = ({quantitySelected}) =>{
+const ItemCount = ({quantitySelected, productData}) =>{
     const [count, setCount] = useState(1)
+    const {addProductToCart} = useContext (CartContext)
 
     const addCount = () =>{
         setCount (count + 1)
@@ -13,7 +15,9 @@ const ItemCount = ({quantitySelected}) =>{
     }
 
     const onAdd = () =>{
+        console.log("Agregado: ", productData)
         quantitySelected(count)
+        addProductToCart(productData)
     }
 
     return(
@@ -24,7 +28,7 @@ const ItemCount = ({quantitySelected}) =>{
                 <button class="buttonAr" onClick={addCount}>+</button>
             </div>
 
-            <button class="buttonAdd" onClick={onAdd}>AÑADIR AL CARRITO</button>
+            <button class="buttonAdd" onClick={onAdd}>AGREGAR AL CARRITO</button>
         </>
         
     )

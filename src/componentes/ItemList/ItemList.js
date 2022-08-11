@@ -1,7 +1,9 @@
 import './ItemList.scss'
 import Item from '../Item/Item';
 import prod from '../../mock/prod.mocks'
-import {useState,useEffect} from 'react';
+import {useState, useEffect, useContext} from 'react';
+import { CartContext } from '../../context/CartContext';
+import { useParams } from 'react-router-dom';
 
 const ItemList = () =>{
 
@@ -19,7 +21,6 @@ const ItemList = () =>{
 
     return(
         <div class='div-container'>
-            {console.log("Estado: ", listProd)}
             {listProd.map( product => <Item key={product.id} data={product}/>)}
         </div> 
     )

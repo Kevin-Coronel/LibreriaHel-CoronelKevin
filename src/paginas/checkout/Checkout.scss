@@ -1,0 +1,16 @@
+.titH1{
+    margin-bottom: 110px;
+}
+
+.divCart {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    padding-right: 106px;
+    align-items: center;
+
+    img{
+        width: 160px;
+    }
+}

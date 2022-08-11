@@ -17,7 +17,7 @@ const ItemDetail = ({data}) =>{
             <p class="sub-title">Descripción:</p>
             <p class="description">{data.desc}</p>
             
-            {  quantitySelected > 1 ? <Link to="/cart"><button class="button">TERMINAR COMPRA</button></Link> : <ItemCount quantitySelected={setQuantitySelected}/> }
+            {  quantitySelected > 1 ? <Link to="/cart"><button class="button">TERMINAR COMPRA</button></Link> : <ItemCount quantitySelected={setQuantitySelected} productData={data}/> }
             {/* <button class="button">AGREGAR AL CARRITO</button> */}
         </div>
     )
