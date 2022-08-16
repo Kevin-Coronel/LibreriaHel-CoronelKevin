@@ -1,8 +1,21 @@
-.img-cart{
-    align-self: center;
-    width: 25px;
-    height: 25px;
-    margin: 18px;
-    padding-right: 26px;
-    margin-top:36px;
+.cartWid{
+    display: flex;
+    flex-direction: row;
+
+    .text{
+        color: rgb(226, 221, 221);
+        width: 25px;
+        height: 25px;
+        margin: 18px 0px 18px 18px;
+        margin-top:36px;
+    }
+    
+    .img-cart{
+        align-self: center;
+        width: 25px;
+        height: 25px;
+        margin: 18px 18px 18px 0px;
+        padding-right: 26px;
+        margin-top:36px;
+    }
 }

@@ -1,0 +1,15 @@
+.titH1{
+    margin-bottom: 110px;
+}
+
+.divCart {
+display: flex;
+flex-direction: row;
+flex-wrap: nowrap;
+justify-content: space-evenly;
+align-items: center;
+
+    img{
+        width: 160px;
+    }
+}
