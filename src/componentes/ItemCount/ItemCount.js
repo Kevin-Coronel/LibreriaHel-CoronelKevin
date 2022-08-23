@@ -15,7 +15,7 @@ const ItemCount = ({quantitySelected, productData}) =>{
     }
 
     const onAdd = () =>{
-        console.log("Agregado: ", productData)
+        // console.log("Agregado: ", productData)
         quantitySelected(count)
         addProductToCart(productData)
     }

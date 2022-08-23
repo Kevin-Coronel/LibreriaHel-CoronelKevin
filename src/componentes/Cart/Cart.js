@@ -7,7 +7,7 @@ const Cart = () => {
 
     const { cartProducts, removeFromCart, clearCart } = useContext(CartContext)
     
-    {console.log("carro desde checkout: ", cartProducts)}
+    // {console.log("carro desde checkout: ", cartProducts)}
     
     return(
         <div>

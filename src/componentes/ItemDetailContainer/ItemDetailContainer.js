@@ -4,23 +4,41 @@ import prod from '../../mock/prod.mocks';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 
+//Firebase
+import db from '../../firebaseConfig';
+import { doc, getDoc, getDocs} from 'firebase/firestore'
+import { async } from '@firebase/util';
+
 const ItemDetailContainer = () =>{
 
         const { id } = useParams()
 
         const [productData, setProductData] = useState ({})
 
-        const filtroProd = () =>{
-            prod.some( (product) => {
-                if (product.id == id) {
-                    setProductData (product)
-                }
-            } )
-        }
+        // const filtroProd = () =>{
+        //     prod.some( (product) => {
+        //         if (product.id == id) {
+        //             setProductData (product)
+        //         }
+        //     } )
+        // }
 
         useEffect( () =>{
-            filtroProd()
-        }, [])
+            // filtroProd()
+            getProduct ()
+            .then ((res) => {
+                setProductData(res)
+            })
+        }, [id])
+
+
+        const getProduct = async () =>{
+            const docRef = doc(db, 'products', id)
+            const docSnapshot = await getDoc (docRef)
+            let product = docSnapshot.data()
+            product.id = docSnapshot.id
+            return product
+        }
 
     return(
         <div>
