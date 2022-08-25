@@ -11,7 +11,7 @@ const Item = ({data}) =>{
             <div class='div-item'>
                 <img src={`./recursos/${imagen}`} alt='tokyo'/>
                 <p class="tarjTit">{title}</p>
-                <p class="tarjPrice">{price}</p>
+                <p class="tarjPrice">${price}</p>
                 <button class="botonMain">AGREGAR AL CARRITO</button>
             </div>
         </Link>

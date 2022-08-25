@@ -1,8 +1,15 @@
 import './Checkout.scss';
+import Cart from '../../componentes/Cart/Cart';
 
-const Checkout = () => {
+const Checkout = (orderId) => {
+    
     return(
-        <h1>Pag. De Checkout</h1>
+        <>
+            <h2>Su orden fue generada correctamente</h2>
+            
+            {/* <p>El id de su compra es: {orderId}</p> */}
+        </>
+        
     )
 }
 
