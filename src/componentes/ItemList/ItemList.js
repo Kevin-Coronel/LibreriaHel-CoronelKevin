@@ -10,16 +10,6 @@ import db from '../../firebaseConfig';
 const ItemList = () =>{
 
    const [listProd, setListProd] = useState([])
-    // const filterByCategory = prod.filter((prod) => prod.category === category);
-
-
-//    const products = new Promise( (resolve, reject) => {
-//         if (category){
-//             resolve(filterByCategory)
-//         } else{
-//             resolve(prod)
-//         }    
-//    })
 
     const {category} = useParams ();
 
@@ -40,9 +30,6 @@ const ItemList = () =>{
         .then ((res) =>{
             setListProd(res)
         })
-        // products.then((response) => {
-        //         setListProd(response)
-        // })
    },[])
 
     return(

@@ -15,14 +15,6 @@ const ItemDetailContainer = () =>{
 
         const [productData, setProductData] = useState ({})
 
-        // const filtroProd = () =>{
-        //     prod.some( (product) => {
-        //         if (product.id == id) {
-        //             setProductData (product)
-        //         }
-        //     } )
-        // }
-
         useEffect( () =>{
             // filtroProd()
             getProduct ()

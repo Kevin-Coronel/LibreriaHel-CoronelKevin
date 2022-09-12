@@ -1,4 +1,3 @@
-import './Checkout.scss';
 import Cart from '../../componentes/Cart/Cart';
 
 const Checkout = (orderId) => {
