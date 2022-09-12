@@ -57,9 +57,9 @@ const Cart = () => {
                                     <div >
                                         <div class="divCart" key="product.id">
                                             <img src={`../recursos/${product.imagen}`} alt={`tokyo`} />
-                                            <p>{product.title}</p>
-                                            <p>${product.price}</p>
-                                            <button onClick={() => removeFromCart (product.id)}>X</button>
+                                            <p class="productT">{product.title}</p>
+                                            <p class="productT">${product.price}</p>
+                                            <button class="xButton" onClick={() => removeFromCart (product.id)}>X</button>
                                         </div>
                                     </div>
                                 </>
@@ -68,12 +68,12 @@ const Cart = () => {
                             )
                         })}
 
-                        <button onClick={() => clearCart()}>Vaciar Carrito</button>
+                        <button class="vCart" onClick={() => clearCart()}>Vaciar Carrito</button>
                     </div>
                 ) : (
                     <div>
-                        <h2>EL CARRITO DE COMPRAS ESTÁ VACÍO</h2>
-                        <Link to={'/'}><button>Volver al Inicio</button></Link>
+                        <h2 class="cartVacio">EL CARRITO DE COMPRAS ESTÁ VACÍO</h2>
+                        <Link to={'/'}><button class="vCart">Volver al Inicio</button></Link>
                     </div>
                         
                     )}
@@ -83,39 +83,42 @@ const Cart = () => {
                 <>
                     <h2>Formulario de Compra</h2>
 
-                    <form onSubmit={submitData}>
+                    <form class="form" onSubmit={submitData}>
+                        <p class="productT">Ingrese Su Nombre:</p>
                         <input 
                             type='text' 
                             name='name' 
-                            placeholder='Nombre' 
+                            placeholder='Kevin' 
                             value={formData.name} 
                             onChange={handleChange}
                         />
 
+                        <p class="productT">Ingrese Número de Teléfono:</p>
                         <input 
                             type='number' 
                             name='phone' 
-                            placeholder='Ingrese su Teléfono'
+                            placeholder='1123546879'
                             value={formData.phone}
                             onChange={handleChange}
                         />
 
+                        <p class="productT">Ingrese Su Email:</p>
                         <input 
                             type='email' 
                             name='email' 
-                            placeholder='Ingrese su direccion de Email'
+                            placeholder='email@email.com'
                             value={formData.email}
                             onChange={handleChange}
                         />
-                        <button type='submit'>Enviar</button>
+                        <button type='submit' class="vCart">Enviar</button>
                     </form>
 
                     {/* <Link to={'/checkout'}><button>Terminar Compra</button></Link> */}
 
                     {orderId ? (
                         <>
-                            <h3>Su orden se generó correctamente</h3>
-                            <p>El numero de ID de su compra es: {orderId} </p>
+                            <h2>Su orden se generó correctamente</h2>
+                            <p class="productT">El numero de ID de su compra es: {orderId} </p>
                         </>
                         
                     ): ("")}
